@@ -4,6 +4,11 @@
 
 Show the battery level of a Razer Basilisk V3 X HyperSpeed mouse in your desktop's power applet on Linux, next to your other wireless devices. No Razer Synapse or OpenRazer needed.
 
+<p align="center">
+  <img src="docs/power-applet.png" alt="Cinnamon power applet listing a Magic Keyboard, an APC UPS and the Razer Basilisk V3 X HyperSpeed at 21%" width="450"><br>
+  <sub><b>Cinnamon power applet</b>: the mouse listed with its own icon, next to a keyboard and a UPS.</sub>
+</p>
+
 The mouse only reports its battery through Razer's vendor protocol, which desktop tools don't understand. basilisk-battery reads it from the 2.4 GHz receiver and republishes it as a standard HID battery, so the kernel exposes it as a `power_supply` and UPower lists it as a mouse. Anything that uses UPower picks it up: the Cinnamon, GNOME and KDE power applets, `upower -d`, and so on.
 
 ## Supported hardware
