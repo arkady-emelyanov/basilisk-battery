@@ -1,0 +1,4 @@
+# UPower derives a HID battery's kind from its sibling input node. Mark the input node
+# of the virtual device created by basilisk-battery as a mouse. Only the inputN node is
+# tagged, not its eventN node, so libinput does not treat it as a pointer.
+SUBSYSTEM=="input", KERNEL=="input*", ATTR{uniq}=="basilisk-v3-x-hyperspeed", ENV{ID_INPUT_MOUSE}="1"
